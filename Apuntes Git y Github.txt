@@ -1,0 +1,44 @@
+Apuntes Git y Github
+
+COMANDOS
+
+git log --> Nos muestra todos los commits que hemos agregado 
+	Quien fue su autor, cuando se hizo y nos muestra la descripción que le hemos aportado.
+
+git log --stat --> cuantos archivos hemos modificado con sus 		inserciones (calculadas por lineas de código) y lo que 			borramos
+
+git log --oneline --> Todo el historial de los commit en una sola linea
+
+git log --graph --> Gráficas que nos muestra sobre los commit modificados. Son muy útiles para trabajar con ramas.
+
+git log --oneline --graph --all --> tenemos todo junto. El historial de los commit en una línea y en una gráfica
+
+git diff --> Diferencia entre el commit pasado y lo que hemos agregado en el nuevo.
+
+git diff HEAD --> La diferenia que hay en el HEAD
+
+---
+
+Si ponemos,
+	git log --online
+obtenemos el historial de los commit con sus referencias.
+Al poner
+	git diff "referencia (ej "9fb8571") index.html
+nos muestra todos los cambios en las líneas de código que hemos hecho con el index.html que tenemos actualmente
+
+---
+
+git checkout 9fb8571 (un commit anterior al actual)
+	Al poner eso en consola estamos volviendo a la versión anterior. Se modificará automáticamente el archivo. En este caso, index.html
+
+--------------------------------------------------------------
+
+RAMAS (branches)
+
+Básicamente es nuestro proyecto que hemos dividido en dos copias. La original y la copia donde vamos a efectuar nuestros cambios, para que en caso de no gustarnos borrar y volver a la original.
+
+git branch --> Vemos todas la ramas que tenemos
+
+git checkout master --> pasamos el parámetro master para que nos cambie a la rama master
+
+git checkout -b "nombre xxx". Duplicamos nuestro proyecto
